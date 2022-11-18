@@ -9,9 +9,10 @@ string[] result = FindLessThan(array, 3);
 WriteLine($"[{string.Join(", ", array)}] -> [{string.Join(", ", result)}]");
 
 string[] FindLessThan(string[] input, int n) {
-    string[] output = new string[CountLessThan(input, n)];
+string[] output = new string[CountLessThan(input, n)];
 
-    for(int i = 0, j = 0; i < input.Length; i++) {
+    for(int i = 0, j = 0; i < input.Length; i++) 
+    {
         if(input[i].Length <= n)  //=n
         {
             output[j] = input[i];
@@ -22,11 +23,12 @@ string[] FindLessThan(string[] input, int n) {
     return output;
 }
 
-int CountLessThan(string[] input, int n) {
+int CountLessThan(string[] input, int n) 
+{
     int count = 0;
-
-    for(int i = 0; i < input.Length; i++) {
-        if(input[i].Length <=n) {  // <=n
+    for(int i = 0; i < input.Length; i++) 
+    {
+        if(input[i].Length <=n) {  
             count++;
         }
     }
@@ -34,7 +36,8 @@ int CountLessThan(string[] input, int n) {
     return count;
 }
 
-string[] AskArray() {
+string[] AskArray() 
+{
     Write("Введите значения через пробел: ");
     return ReadLine().Split(" ");
 }
